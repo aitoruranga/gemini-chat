@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Chat Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Markdown and Highlight.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <i class="fas fa-sparkles" style="color: var(--accent-color);"></i> BotTxiki
+            </div>
+            <button id="auth-btn" class="btn login-btn-sidebar">Hasi Saioa</button>
+            <div id="user-display" class="user-info" style="display: none;">
+                <span id="username-span">Erabiltzailea</span>
+                <i class="fas fa-sign-out-alt" id="logout-icon" style="cursor: pointer;" title="Saioa itxi"></i>
+            </div>
+        </div>
+
+        <div class="history-list" id="history-list">
+            <!-- History items will be injected here -->
+            <div style="padding: 1rem; color: var(--text-muted); text-align: center; font-size: 0.8rem;">
+                Hasi saioa historia ikusteko
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Chat -->
+    <main class="main-chat">
+        <div class="chat-container" id="chat-container">
+            <div class="message ai">
+                <div class="avatar"></div>
+                <div class="message-content">
+                    Kaixo, BotTxiki naiz. Zertan lagun zaitzaket gaur?
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-container">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Idatzi zure mezua hemen...">
+                <button id="send-btn" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2 id="modal-title">Hasi Saioa</h2>
+                <p>Sartu zure historia gordetzeko</p>
+            </div>
+            <form id="auth-form">
+                <div class="form-group">
+                    <label>Erabiltzailea</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Pasahitza</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Jarraitu</button>
+            </form>
+            <div class="auth-toggle">
+                <span id="toggle-text">Ez daukazu konturik?</span>
+                <a id="toggle-link">Erregistratu</a>
+            </div>
+            <div class="auth-toggle" style="margin-top: 5px;">
+                <a id="close-modal" style="color: var(--text-muted);">Itxi</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
