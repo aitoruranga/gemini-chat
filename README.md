@@ -1,9 +1,20 @@
-Gemini APIa erabiltzen duen txatbota
-Backend: PHP
-DB: MySQL/MariaDB
+# Gemini API bidezko Txatbota
 
-Martxan jartzeko:
-Sortu API Key-a https://aistudio.google.com/api-keys
-Sortu DBa MySQL edo MariaDB
-Aldatu config-sample.php => config.php
-Konfigurazio fitxategian: API Keya eta DBaren kredentzialak idatzi
+## 🧩 Teknologiak
+- **Backend-a**: PHP  
+- **Datu-basea**: MySQL / MariaDB  
+
+## 🚀 Martxan jartzeko pausuak
+
+1. **API Key-a sortu**  
+   Gemini APIa erabiltzeko, sortu API gakoa hemen:  
+   👉 https://aistudio.google.com/api-keys
+
+2. **Datu-basea sortu**  
+   Sortu datu-base bat **MySQL** edo **MariaDB** erabiliz.
+
+3. **Konfigurazio fitxategia prestatu**  
+   Aldatu fitxategiaren izena:
+   ```bash
+   config-sample.php → config.php
+
