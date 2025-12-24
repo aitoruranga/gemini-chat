@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', ''); // Cambiar si es necesario
-define('DB_NAME', 'lehen_geminichat');
+define('DB_NAME', 'geminichat');
 
 // Configuración de Gemini API
 // https://aistudio.google.com/api-keys
